@@ -1,22 +1,106 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Archivos de origen">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="internal">
+      <UniqueIdentifier>{aca6080a-f315-4f66-8eab-609577845507}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Archivos de encabezado">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="internal\sizes">
+      <UniqueIdentifier>{6cc144e5-959a-43b0-b4fe-409504acd430}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Archivos de recursos">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="internal\windows">
+      <UniqueIdentifier>{4771a70d-a48e-47a3-a26c-509a16ebd83e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="internal\D3D11">
+      <UniqueIdentifier>{90138257-809a-4ce8-9f61-c010785a19e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="internal\D3D11\shaders">
+      <UniqueIdentifier>{2ee2496a-ce1b-446d-9e5b-92844f0d79d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="internal\renderer">
+      <UniqueIdentifier>{d5fc5c86-110b-4729-92b5-1b1ad7ad0379}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="internal\D3D11\buffers">
+      <UniqueIdentifier>{3336718c-7194-4502-b584-6ce60bd40312}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="internal\inputs">
+      <UniqueIdentifier>{e2d5174d-f330-45fd-a035-16fe5c96e307}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="local_player">
+      <UniqueIdentifier>{2d58897a-5fa9-42c6-8df1-5d68c9e676e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="internal\texturing">
+      <UniqueIdentifier>{5133a5a3-5035-4265-8a98-02376633629e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ShadowEngine.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
+    <ClCompile Include="Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="window_base.hpp">
+      <Filter>internal\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="vector2d.hpp">
+      <Filter>internal\sizes</Filter>
+    </ClInclude>
+    <ClInclude Include="swapchain.hpp">
+      <Filter>internal\D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="device_context.hpp">
+      <Filter>internal\D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="main_game_window.hpp">
+      <Filter>internal\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="idxgi_factory.hpp">
+      <Filter>internal\D3D11</Filter>
+    </ClInclude>
+    <ClInclude Include="vertex_shader.hpp">
+      <Filter>internal\D3D11\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="pixel_shader.hpp">
+      <Filter>internal\D3D11\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="vector3d.hpp">
+      <Filter>internal\sizes</Filter>
+    </ClInclude>
+    <ClInclude Include="renderer.hpp">
+      <Filter>internal\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix.hpp">
+      <Filter>internal\sizes</Filter>
+    </ClInclude>
+    <ClInclude Include="constant_buffer.hpp">
+      <Filter>internal\D3D11\buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="vertex_buffer.hpp">
+      <Filter>internal\D3D11\buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="index_buffer.hpp">
+      <Filter>internal\D3D11\buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="keyboard.hpp">
+      <Filter>internal\inputs</Filter>
+    </ClInclude>
+    <ClInclude Include="mouse.hpp">
+      <Filter>internal\inputs</Filter>
+    </ClInclude>
+    <ClInclude Include="vector4d.hpp">
+      <Filter>internal\sizes</Filter>
+    </ClInclude>
+    <ClInclude Include="local_player.hpp">
+      <Filter>local_player</Filter>
+    </ClInclude>
+    <ClInclude Include="texture_manager.hpp">
+      <Filter>internal\texturing</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="vertex_shader.hlsl">
+      <Filter>internal\D3D11\shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="pixel_shader.hlsl">
+      <Filter>internal\D3D11\shaders</Filter>
+    </FxCompile>
   </ItemGroup>
 </Project>
